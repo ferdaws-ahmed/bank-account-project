@@ -12,9 +12,9 @@
     <title>Bank Account</title>
 </head>
 <body>
-           <div  >
-                    <h1 class="text-center div-style">Welcome to Perfect Bank</h1>
-                <div id="login-area">
+           <div id="login-area" >
+                    <h1 class="text-center h1-style">Welcome to Perfect Bank</h1>
+                <div >
                      <div   class=" m-auto mt-5 w-75 border-none rounded shadow-lg p-5 d-grid gap-0">
                     <h4 class="">Login</h4>
                     <input class="w-75 px-2" type="text" placeholder="Email" name="" id="">
@@ -28,6 +28,11 @@
            </div>
 
 
+           <div id="wallet">
+                  
+           </div>
+
+
 
 
 
@@ -36,6 +41,9 @@
                     loginBtn.addEventListener('click', function(){
                         const loginArea = document.getElementById('login-area');
                         loginArea.style.display = 'none';
+
+                        const wallet = document.getElementById('wallet');
+                        wallet.style.display = 'block';
                     });
            </script>
 </body>

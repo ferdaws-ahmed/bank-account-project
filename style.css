@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 
-.div-style{
+.h1-style{
     margin-top: 150px;
+    font-weight: bold;
 }
 
 .style-btn{
@@ -22,4 +23,9 @@
 }
 .style-btn:active{
     background-color: rgb(44, 240, 37);
+}
+
+
+#wallet{
+    display: none;
 }
