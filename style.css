@@ -1,0 +1,25 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div-style{
+    margin-top: 150px;
+}
+
+.style-btn{
+    width: 55px;
+    height: 26px;
+    font-weight: 500;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(64, 164, 64);
+}
+.style-btn:active{
+    background-color: rgb(44, 240, 37);
+}
