@@ -12,14 +12,31 @@
     <title>Bank Account</title>
 </head>
 <body>
-    <h1 class="text-center div-style">Welcome to Perfect Bank</h1>
-    <div class=" m-auto mt-5 w-75 border-none rounded shadow-lg p-5 d-grid gap-0">
-        <h4 class="">Login</h4>
-        <input class="w-75" type="text" placeholder="Email" name="" id="">
-        <br>
-        <input class="w-75" type="password" placeholder="Password" name="" id="">
-        <br>
-        <button class="style-btn">Login</button>
-    </div>
+           <div  >
+                    <h1 class="text-center div-style">Welcome to Perfect Bank</h1>
+                <div id="login-area">
+                     <div   class=" m-auto mt-5 w-75 border-none rounded shadow-lg p-5 d-grid gap-0">
+                    <h4 class="">Login</h4>
+                    <input class="w-75 px-2" type="text" placeholder="Email" name="" id="">
+                    <br>
+                    <input class="w-75 px-2" type="password" placeholder="Password" name="" id="">
+                    <br>
+                    <button id="login" class="style-btn">Login</button>
+                </div>
+                </div>
+                    
+           </div>
+
+
+
+
+
+           <script>
+                    const loginBtn = document.getElementById('login');
+                    loginBtn.addEventListener('click', function(){
+                        const loginArea = document.getElementById('login-area');
+                        loginArea.style.display = 'none';
+                    });
+           </script>
 </body>
 </html>
