@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- boostrap cdn  -->
+    <!-- bootstrap cdn  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
    
     <!-- link css -->
@@ -27,16 +27,70 @@
                     
            </div>
 
-
-           <div id="wallet">
+      
+      
+           
+           <div id="wallet" >
                   
+                <!-- wallet status section -->
+                    <div class="row row-1 ">
+                            <div class="col-md-4">
+                                <div class="deposit w-style">
+                                    <h5>Deposit</h5>
+                                    <h2>$ <span id="current-deposit">00</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="withdraw w-style">
+                                    <h5>Withdraw</h5>
+                                    <h2>$00</h2>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="balance w-style">
+                                    <h5>Balance</h5>
+                                    <h2>$1400</h2>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- wallet status section end -->
+
+
+
+
+                        <!-- wallet input section -->
+
+
+                            <div class="row row-2">
+                                <div class="col-md-6 input-style">
+                                    <h5 class="">Deposit</h5>
+                                    <input id="dep-amount" class="px-2 py-1 w-75 mt-1" type="text" placeholder="$ amount you want to deposit"> 
+                                    <br>
+                                    <button id="dep-btn" class="mt-3 style-btn w-25">Deposit</button>
+                                </div>
+                                <div class="col-md-6 input-style">
+                                    <h5>Withdraw</h5>
+                                    <input class="px-2 py-1 w-75 mt-1" type="text" placeholder="$ amount you want to withdraw"> 
+                                    <br>
+                                    <button class="mt-3 style-btn w-25">Withdraw</button>
+                                </div>
+                            </div>        
+
+                        <!-- wallet input section -->
+        
            </div>
+
+        
+
+
 
 
 
 
 
            <script>
+
+            // login button even handler
                     const loginBtn = document.getElementById('login');
                     loginBtn.addEventListener('click', function(){
                         const loginArea = document.getElementById('login-area');
@@ -45,6 +99,24 @@
                         const wallet = document.getElementById('wallet');
                         wallet.style.display = 'block';
                     });
+
+            
+            //deposit button even handler
+                   const depositBtn = document.getElementById('dep-btn');
+                   depositBtn.addEventListener('click', function(){
+                    const depositAmount = document.getElementById('dep-amount').value;
+                    const depositNumber = parseFloat(depositAmount);
+                    
+                    const currentDeposit = document.getElementById('current-deposit').innerText;
+                    const currentNumber = parseFloat(currentDeposit);
+                    const total = depositNumber + currentNumber;
+                    
+                    document.getElementById('current-deposit').innerText = total;
+                    document.getElementById('dep-amount').value = "";
+
+                    
+
+                   })
            </script>
 </body>
 </html>
